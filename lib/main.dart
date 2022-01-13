@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/auth/sign_in.dart';
+// import 'package:food_app/auth/sign_in.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:food_app/screens/home_screen.dart';
 
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

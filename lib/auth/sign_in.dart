@@ -1,13 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:food_app/components/utils/size_config.dart';
+// import 'package:food_app/components/utils/size_config.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 import '../screens/home_screen.dart';
 
 class SignIn extends StatefulWidget {
+  const SignIn({Key? key}) : super(key: key);
+
   @override
   State<SignIn> createState() => _SignInState();
 }
@@ -33,13 +35,16 @@ class _SignInState extends State<SignIn> {
       // print("signed in " + user.displayName);
 
       return user;
-    } catch (e) {}
+    } catch (e) {
+      // ignore: avoid_print
+      print(e);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     // Full screen width and height
-    double width = MediaQuery.of(context).size.width;
+    // double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
 // Height (without SafeArea)
@@ -98,7 +103,7 @@ class _SignInState extends State<SignIn> {
               onPressed: () {
                 _googleSignUp().then((value) =>
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => HomeScreen(),
+                      builder: (context) => const HomeScreen(),
                     )));
               },
             ),

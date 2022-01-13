@@ -1,14 +1,16 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffcbcbcb),
+      backgroundColor: const Color(0xffcbcbcb),
       drawer: const Drawer(),
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         title: const Text(
           'Home',
           style: TextStyle(color: Colors.black),
@@ -36,7 +38,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ],
-        backgroundColor: Color(0xffd6b738),
+        backgroundColor: const Color(0xffd6b738),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
