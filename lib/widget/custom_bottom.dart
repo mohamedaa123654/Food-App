@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/components/utils/size_config.dart';
+import 'package:food_app/widget/utils/size_config.dart';
 
-import 'constents.dart';
+import 'utils/constents.dart';
 
 class CustomGeneralBottom extends StatelessWidget {
   final String? text;

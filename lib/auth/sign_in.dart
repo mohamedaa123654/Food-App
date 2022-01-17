@@ -5,7 +5,7 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 // import 'package:food_app/components/utils/size_config.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../screens/home_screen.dart';
+import '../screens/Home/home_screen.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -103,7 +103,7 @@ class _SignInState extends State<SignIn> {
               onPressed: () {
                 _googleSignUp().then((value) =>
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const HomeScreen(),
+                      builder: (context) => HomeScreen(),
                     )));
               },
             ),
